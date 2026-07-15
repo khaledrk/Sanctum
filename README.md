@@ -1,23 +1,38 @@
-# Iribiopolis
+# Iribiopolis — Ruin Ecology v6
 
-An immersive landscape-practice website centred on ruination, ecological succession, damaged ground, public access and contested memory.
+The current full build is a 200+ MB static practice website centred on ruination, ecological succession, damaged ground, public access and contested memory.
 
-## Structure
+## Full structure
 
-- `index.html` — immersive practice homepage
-- `practice.html` — manifesto and practice approach
-- `project.html` — full Ruins Regrounded project
-- `fieldnotes.html` — evidence, mapping, recording and listening
-- `relations.html` — collaborators, clients and commissions
-- `context.html` — practitioners, texts and ideas
-- `styles.css` — complete visual and responsive system
-- `script.js` — navigation, spores, cursor, reveal and spatial interactions
-- `assets/` — project drawings and Iribiopolis sigil
+- `index.html` — immersive home using the composite Shornemead drawing
+- `practice.html` — manifesto, name and practice approach
+- `project.html?id=ruins-regrounded` — central Masters project
+- `fieldnotes.html` — moving evidence cards linked to projects
+- `archive.html` — project lineages and associated work
+- `relations.html` — collaborators, commissions and contact
+- `context.html` — ruin ecology, critical conservation and practice references
+- `data/site-data.js` — project text, galleries and links
+- `assets/images/` — high-resolution portfolio sheets and original project imagery
+- `assets/pdfs/` — complete portfolios and supporting documents
+
+## Downloadable asset-rich build
+
+The complete generated package is named `iribiopolis-ruin-ecology-v6.zip`. Extract it and upload its contents to this repository to replace the lighter diagram-only build currently stored here.
+
+## Open locally
+
+Double-click `index.html`, or run:
+
+```bash
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000`.
 
 ## Deploy
 
-Connect this repository to Netlify or Vercel with no build command. Publish the repository root. The site is static and all pages are directly accessible.
+Connect the repository to Netlify. No build command is required and the publish directory is the repository root.
 
-## Editing
+## Visual system
 
-Public text is contained in the corresponding HTML page. Replace an image in `assets/` while keeping its file name to update it everywhere without changing page code.
+The interface uses fog, spores, sediment lines, slow weathering, moving field evidence and layered archive strata. All public imagery in the full package comes from Khaled's projects and portfolios. External game and film references are retained only as design research and are not used as public website content.
