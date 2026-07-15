@@ -4,34 +4,88 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Iribiopolis — Practice of Ruination</title>
-<meta name="description" content="Iribiopolis is a landscape practice working with ruins, tidal landscapes, ecological succession, public access and contested memory.">
+<meta name="description" content="Iribiopolis is a landscape practice working with ruins, ecological succession, public access, memory and damaged ground.">
+<meta name="theme-color" content="#11130f">
+<link rel="icon" href="assets/sigil.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="home">
+<div class="prelude" aria-hidden="true"><div class="prelude-mark">IRIBIOPOLIS</div><div class="prelude-line"></div></div>
+<canvas id="spore-field" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span></span></div>
 <header class="site-header">
-  <a class="wordmark" href="index.html">IRIBIOPOLIS</a>
-  <nav><a href="#practice">Practice</a><a href="#project">Project</a><a href="#relations">Relations</a><a href="#references">References</a></nav>
+  <a class="identity" href="index.html"><img src="assets/sigil.svg" alt=""><span>IRIBIOPOLIS</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">MENU</button>
+  <nav id="site-nav">
+    <a href="practice.html">Practice</a>
+    <a href="project.html">Project</a>
+    <a href="fieldnotes.html">Fieldnotes</a>
+    <a href="relations.html">Relations</a>
+    <a href="context.html">Context</a>
+  </nav>
 </header>
 <main>
-<section class="hero">
-  <a href="assets/hero.svg" target="_blank" rel="noopener" class="hero-image" aria-label="Open composite drawing at full size"><img src="assets/hero.svg" alt="Composite drawing tracing twelve openings and material conditions at Shornemead Fort"></a>
-  <div class="hero-title"><p>LANDSCAPE PRACTICE</p><h1>IRIBIOPOLIS</h1><p class="lead">Working with what remains.</p></div>
+<section class="hero ruin-frame">
+  <a class="hero-plate" href="project.html" aria-label="Enter Ruins Regrounded project">
+    <img src="assets/hero.svg" alt="Composite landscape drawing of Shornemead Fort, its openings, material decay and tidal ground">
+    <span class="erosion-mask" aria-hidden="true"></span>
+    <span class="scan" aria-hidden="true"></span>
+  </a>
+  <div class="hero-copy">
+    <p class="kicker">Landscape practice / Cairo + London</p>
+    <h1>IRIBIOPOLIS</h1>
+    <div class="hero-statement"><p>Working with what remains.</p><a href="practice.html">Enter the practice <span>↗</span></a></div>
+  </div>
+  <div class="coordinates" aria-hidden="true"><span>51.4518° N</span><span>0.4676° E</span><span>TIDAL / OCCUPIED / UNFINISHED</span></div>
 </section>
-<section id="practice" class="practice section">
-  <div class="section-index">01 / PRACTICE</div>
-  <div class="practice-grid">
-    <div><h2>A practice of ruination</h2><p>Iribiopolis treats ruination as an active landscape condition: material, ecological, political and social.</p></div>
-    <div class="manifesto"><p>We read decay before proposing repair.</p><p>We work with water, vegetation, occupation and time.</p><p>We make existing conflicts spatially legible.</p><p>We design access without flattening difference.</p><p>We test how damaged ground can support shared futures.</p></div>
+<section class="threshold section">
+  <div class="section-code">01 / POSITION</div>
+  <div class="threshold-grid">
+    <h2>Ruination is not the end of a site.</h2>
+    <div><p>It is the moment when structures, ecologies, memories and uses stop agreeing with one another.</p><p>Iribiopolis works inside that instability.</p></div>
+  </div>
+  <a class="text-link" href="practice.html">Read the manifesto <span>→</span></a>
+</section>
+<section class="portal section dark">
+  <div class="section-code">02 / CENTRAL PROJECT</div>
+  <a class="portal-image" href="project.html"><img src="assets/transect.svg" alt="Territorial transect from dock infrastructure through marsh to Shornemead Fort"><span>OPEN PROJECT</span></a>
+  <div class="portal-copy"><p class="eyebrow">Ruins Regrounded</p><h2>A fort opened to tide, occupation and succession.</h2><p>The proposal does not restore a finished object. It creates a changing civic and ecological ground shaped by twelve openings, flooding, sediment, vegetation and public movement.</p><a class="button" href="project.html">Explore the project</a></div>
+</section>
+<section class="systems section">
+  <div class="section-code">03 / HOW WE WORK</div>
+  <div class="system-orbit" id="system-orbit">
+    <a href="fieldnotes.html#recording" class="system-node" style="--x:12%;--y:18%"><span>01</span>Record</a>
+    <a href="fieldnotes.html#mapping" class="system-node" style="--x:73%;--y:12%"><span>02</span>Map</a>
+    <a href="fieldnotes.html#listening" class="system-node" style="--x:45%;--y:38%"><span>03</span>Listen</a>
+    <a href="project.html#openings" class="system-node" style="--x:17%;--y:72%"><span>04</span>Open</a>
+    <a href="project.html#regrounding" class="system-node" style="--x:79%;--y:70%"><span>05</span>Reground</a>
+    <a href="relations.html" class="system-node" style="--x:48%;--y:84%"><span>06</span>Share</a>
+    <svg class="root-lines" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true"><path d="M120 100 C300 20 400 260 720 70 S760 420 480 470 S180 380 120 100"/><path d="M440 210 C540 100 760 160 780 390"/><path d="M170 400 C320 500 500 380 720 420"/></svg>
   </div>
 </section>
-<section id="project" class="project section dark">
-  <div class="section-index">02 / PROJECT</div>
-  <div class="project-intro"><div><h2>Ruins Regrounded</h2><p>Shornemead Fort and the Thames marshes are developed as a changing civic and ecological ground rather than a preserved object.</p></div><div><p>The proposal works through twelve openings, tidal occupation, material weathering and public movement. The fort remains incomplete, accessible and continually remade.</p></div></div>
-  <div class="image-grid"><a href="assets/estuarine.svg" target="_blank"><img src="assets/estuarine.svg" alt="Estuarine ruins regional study"></a><a href="assets/transect.svg" target="_blank"><img src="assets/transect.svg" alt="Territorial transect from dock to ruined fort"></a><a href="assets/floodscape.svg" target="_blank"><img src="assets/floodscape.svg" alt="Future floodscape strategy"></a></div>
-  <div class="process-strip"><article><span>READ</span><p>Record material decay, hydrological traces, ecological intrusion and informal occupation.</p></article><article><span>OPEN</span><p>Use cuts, thresholds and routes to shift the fort from enclosure toward shared ground.</p></article><article><span>REGROUND</span><p>Allow tide, sediment, vegetation and use to become design agents.</p></article></div>
+<section class="archive-gate section dark">
+  <div class="section-code">04 / LINEAGE</div>
+  <div class="archive-intro"><h2>Before the proposal came the evidence.</h2><p>Field recordings, contaminated ground, hydrological traces, informal access, industrial remains and speculative futures developed the practice.</p></div>
+  <div class="archive-cards">
+    <a href="fieldnotes.html#digestion"><img src="assets/digestion.svg" alt="Digestion and Ruination mapping"><span><b>Digestive territories</b><small>systems / extraction / invasion</small></span></a>
+    <a href="fieldnotes.html#recording"><img src="assets/recordings.svg" alt="Layers of ruination recordings"><span><b>Material evidence</b><small>decay / water / occupation</small></span></a>
+    <a href="fieldnotes.html#entropy"><img src="assets/entropy.svg" alt="Between order and entropy design study"><span><b>Unstable ground</b><small>industry / habitat / contamination</small></span></a>
+  </div>
 </section>
-<section class="archive section"><div class="section-index">03 / LINEAGE</div><div class="archive-head"><h2>From Ruin Reassembly to Ruins Regrounded</h2><p>The practice developed through repeated studies of industrial landscapes, contamination, entropy, memory and future occupation.</p></div><div class="archive-grid"><a href="assets/digestion.svg" target="_blank"><img src="assets/digestion.svg" alt="Digestion and ruination mapping"></a><a href="assets/recordings.svg" target="_blank"><img src="assets/recordings.svg" alt="Layers of ruination field recordings"></a><a href="assets/entropy.svg" target="_blank"><img src="assets/entropy.svg" alt="Between order and entropy design study"></a></div></section>
-<section id="relations" class="relations section"><div class="section-index">04 / RELATIONS</div><div class="relations-grid"><div><h2>Who we work with</h2><p>Communities living beside contested landscapes; environmental and heritage groups; public institutions; researchers; fabricators; artists; ecologists; and people holding local knowledge.</p></div><div><h2>What we offer</h2><p>Landscape research, site recording, spatial strategy, mapping, public engagement, exhibitions, prototypes and design development.</p></div><div><h2>What we seek</h2><p>Collaborations where abandoned, damaged or changing sites need to be understood before they are transformed.</p><a class="button" href="mailto:khaled.rk.gad@gmail.com">Start a conversation</a></div></div></section>
-<section id="references" class="references section dark"><div class="section-index">05 / CONTEXT</div><div class="references-grid"><div><h2>In conversation with</h2><p>Landscape practices that work through succession, maintenance and long timeframes; community-led heritage work; counter-mapping; critical conservation; and practices that treat ecology as an active political field.</p></div><ul><li>Gilles Clément — Third Landscape</li><li>Anna Tsing — disturbance and collaborative survival</li><li>Tim Edensor — industrial ruins and material memory</li><li>Caitlin DeSilvey — curated decay</li><li>CLUSTER — urban research and public knowledge</li><li>Athar Lina / Megawra — community-centred heritage</li></ul></div></section>
-<section class="about section"><div class="section-index">06 / CONTACT</div><div><h2>Iribiopolis</h2><p>Founded by Khaled .M Gad. Based between Cairo and London.</p><p><a href="mailto:khaled.rk.gad@gmail.com">khaled.rk.gad@gmail.com</a></p></div></section>
-</main><script src="script.js"></script></body></html>
+<section class="relations-preview section">
+  <div class="section-code">05 / RELATIONS</div>
+  <div class="relations-preview-grid">
+    <h2>Practice is built through relations.</h2>
+    <div class="relation-list"><a href="relations.html#communities">Communities and local knowledge <span>↗</span></a><a href="relations.html#institutions">Environmental and heritage institutions <span>↗</span></a><a href="relations.html#collaborators">Researchers, ecologists, artists and fabricators <span>↗</span></a><a href="relations.html#commission">Commission a study, strategy or public programme <span>↗</span></a></div>
+  </div>
+</section>
+<section class="contact-ruin section dark">
+  <div class="contact-sigil"><img src="assets/sigil.svg" alt="Iribiopolis symbol"></div>
+  <div><p class="eyebrow">Enter the unfinished</p><h2>Bring us a site that refuses a simple answer.</h2><a class="button light" href="mailto:khaled.rk.gad@gmail.com">Start a conversation</a></div>
+</section>
+</main>
+<footer><span>IRIBIOPOLIS</span><span>Founded by Khaled .M Gad</span><span>© 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
