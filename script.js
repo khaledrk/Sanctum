@@ -87,3 +87,51 @@ if(stage&&audio){
  audio.addEventListener('play',()=>sessionStorage.setItem('ereipiapolis-sound','on'));
  audio.addEventListener('pause',()=>sessionStorage.setItem('ereipiapolis-sound','off'));
 }
+
+// Workbook view: scale the complete composition without changing its layout.
+// The lightbox and controls stay at full viewport size while the site zooms out.
+const activeScript=document.currentScript;
+const scaleFrame=document.createElement('div');
+scaleFrame.className='site-scale-frame';
+[...document.body.childNodes].forEach(node=>{
+ if(node!==activeScript && !(node.nodeType===1 && node.classList?.contains('lightbox')))scaleFrame.append(node);
+});
+document.body.insertBefore(scaleFrame,activeScript);
+
+const viewTools=document.createElement('aside');
+viewTools.className='site-view-tools';
+viewTools.setAttribute('aria-label','Workbook composition view');
+viewTools.innerHTML='<span>WORKBOOK VIEW</span><button type="button" data-site-scale="1">100%</button><button type="button" data-site-scale="0.75">75%</button><button type="button" data-site-scale="0.5">50%</button>';
+document.body.insertBefore(viewTools,activeScript);
+
+function setSiteScale(value){
+ const scale=Math.max(.5,Math.min(1,Number(value)||1));
+ scaleFrame.style.zoom=String(scale);
+ scaleFrame.style.width='100%';
+ document.body.classList.toggle('site-overview-active',scale<1);
+ $$('[data-site-scale]',viewTools).forEach(button=>button.setAttribute('aria-pressed',Number(button.dataset.siteScale)===scale?'true':'false'));
+ sessionStorage.setItem('ereipiapolis-view-scale',String(scale));
+}
+$$('[data-site-scale]',viewTools).forEach(button=>button.addEventListener('click',()=>setSiteScale(button.dataset.siteScale)));
+setSiteScale(sessionStorage.getItem('ereipiapolis-view-scale')||1);
+
+// A restrained spatial response: panels tilt by less than one degree and never crop.
+$$('.panel-card').forEach(card=>{
+ card.addEventListener('pointermove',event=>{
+  if(event.pointerType==='touch')return;
+  const rect=card.getBoundingClientRect();
+  const x=(event.clientX-rect.left)/rect.width-.5;
+  const y=(event.clientY-rect.top)/rect.height-.5;
+  card.style.setProperty('--tilt-x',(-y*.9).toFixed(2)+'deg');
+  card.style.setProperty('--tilt-y',(x*.9).toFixed(2)+'deg');
+ });
+ card.addEventListener('pointerleave',()=>{
+  card.style.setProperty('--tilt-x','0deg');
+  card.style.setProperty('--tilt-y','0deg');
+  card.classList.remove('is-touched');
+ });
+ card.addEventListener('pointerdown',()=>{
+  card.classList.add('is-touched');
+  setTimeout(()=>card.classList.remove('is-touched'),420);
+ });
+});
