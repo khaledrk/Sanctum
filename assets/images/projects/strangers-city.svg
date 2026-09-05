@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b1022"/><stop offset="1" stop-color="#5b266d"/></linearGradient>
+<filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".015" numOctaves="4" seed="9"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .45"/></feComponentTransfer></filter>
+</defs>
+<rect width="1800" height="1100" fill="#050505"/>
+<rect width="1800" height="1100" fill="url(#g)" opacity=".72"/>
+<circle cx="520" cy="440" r="300" fill="none" stroke="#f4ff5c" stroke-width="6" stroke-dasharray="18 20" opacity=".6"/>
+<circle cx="1130" cy="650" r="420" fill="none" stroke="#ff4fd8" stroke-width="4" stroke-dasharray="3 16" opacity=".8"/>
+<path d="M0 760 C 330 610, 520 950, 880 760 S 1420 590, 1800 690 L1800 1100 L0 1100Z" fill="#101010" opacity=".82"/>
+<g filter="url(#noise)"><rect width="1800" height="1100"/></g>
+<text x="90" y="170" font-family="monospace" font-size="88" fill="#f4f1ea" font-weight="700">STRANGERS IN THE CITY</text>
+<text x="95" y="240" font-family="monospace" font-size="34" fill="#f4f1ea">worlding / estrangement / place</text>
+</svg>
