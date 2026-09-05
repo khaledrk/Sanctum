@@ -1,38 +1,22 @@
-# Iribiopolis — Ruin Ecology v6
+# EREÍPIAPÓLIS — v7.1 manifesto branch
 
-The current full build is a 200+ MB static practice website centred on ruination, ecological succession, damaged ground, public access and contested memory.
+This branch is the active submission website.
 
-## Full structure
+## Public structure
+- `index.html` — Home / cinematic entry / A0 / practice fragments
+- `about.html` — practice statement / name story / manifesto / MLA methods
+- `project.html` — Ruins Regrounded
+- `partners.html` — collaboration model / future partners / open call
+- `references.html` — grouped research archive
 
-- `index.html` — immersive home using the composite Shornemead drawing
-- `practice.html` — manifesto, name and practice approach
-- `project.html?id=ruins-regrounded` — central Masters project
-- `fieldnotes.html` — moving evidence cards linked to projects
-- `archive.html` — project lineages and associated work
-- `relations.html` — collaborators, commissions and contact
-- `context.html` — ruin ecology, critical conservation and practice references
-- `data/site-data.js` — project text, galleries and links
-- `assets/images/` — high-resolution portfolio sheets and original project imagery
-- `assets/pdfs/` — complete portfolios and supporting documents
+The older `practice.html`, `relations.html`, `context.html`, and `fieldnotes.html` routes now redirect into the five-page submission structure.
 
-## Downloadable asset-rich build
+## Current visual rules
+- IBM Plex Mono throughout, including display headings, as the current typography test.
+- Drawings are shown whole in the viewport and open into a lightbox for detail.
+- Homepage transitions are smooth and fragment-led rather than card-by-card.
+- Ruins Regrounded remains the only featured project.
+- Sound is optional through the cinematic entry.
 
-The complete generated package is named `iribiopolis-ruin-ecology-v6.zip`. Extract it and upload its contents to this repository to replace the lighter diagram-only build currently stored here.
-
-## Open locally
-
-Double-click `index.html`, or run:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
-
-## Deploy
-
-Connect the repository to Netlify. No build command is required and the publish directory is the repository root.
-
-## Visual system
-
-The interface uses fog, spores, sediment lines, slow weathering, moving field evidence and layered archive strata. All public imagery in the full package comes from Khaled's projects and portfolios. External game and film references are retained only as design research and are not used as public website content.
+## Submission guardrail
+Do not expand the public structure beyond the five required pages unless the brief changes. Richness should come from sequencing, interaction, project evidence, references, partners and the manifesto rather than additional portfolio pages.
