@@ -3,89 +3,148 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Iribiopolis — Practice of Ruination</title>
-<meta name="description" content="Iribiopolis is a landscape practice working with ruins, ecological succession, public access, memory and damaged ground.">
-<meta name="theme-color" content="#11130f">
-<link rel="icon" href="assets/sigil.svg" type="image/svg+xml">
+<title>EREÍPIAPÓLIS — Landscape Practice</title>
+<meta name="description" content="EREÍPIAPÓLIS is a landscape practice investigating the afterlives of damaged ground.">
+<meta name="theme-color" content="#111313">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="home">
-<div class="prelude" aria-hidden="true"><div class="prelude-mark">IRIBIOPOLIS</div><div class="prelude-line"></div></div>
+<body class="home" data-page="home">
+
+<div class="entry-stage" id="entry-stage">
+  <div class="entry-weather" aria-hidden="true"></div>
+  <div class="entry-copy">
+    <p class="micro">LANDSCAPE PRACTICE / LONDON</p>
+    <h1>EREÍPIAPÓLIS</h1>
+    <p class="entry-line">Working with what remains.</p>
+    <div class="entry-gate" id="entry-gate" hidden>
+      <button id="enter-sound">ENTER WITH SOUND</button>
+      <button id="enter-silent">ENTER SILENT</button>
+      <small>Your browser has paused audible autoplay.</small>
+    </div>
+  </div>
+</div>
+
+<audio id="site-ambience" autoplay loop preload="auto" playsinline>
+  <source src="https://upload.wikimedia.org/wikipedia/commons/4/42/Rain_and_thunder.ogg" type="audio/ogg">
+  <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/4/42/Rain_and_thunder.ogg/Rain_and_thunder.ogg.mp3" type="audio/mpeg">
+</audio>
+
 <canvas id="spore-field" aria-hidden="true"></canvas>
-<div class="grain" aria-hidden="true"></div>
+<div class="site-grain" aria-hidden="true"></div>
 <div class="cursor" aria-hidden="true"><span></span></div>
+<button class="sound-toggle" id="sound-toggle" data-on="false" aria-label="Toggle atmospheric sound">SOUND</button>
+
+
 <header class="site-header">
-  <a class="identity" href="index.html"><img src="assets/sigil.svg" alt=""><span>IRIBIOPOLIS</span></a>
-  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">MENU</button>
-  <nav id="site-nav">
-    <a href="practice.html">Practice</a>
-    <a href="project.html">Project</a>
-    <a href="fieldnotes.html">Fieldnotes</a>
-    <a href="relations.html">Relations</a>
-    <a href="context.html">Context</a>
+  <a class="brand" href="index.html">EREÍPIAPÓLIS</a>
+  <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">MENU</button>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="about.html">ABOUT</a>
+    <a href="project.html">PROJECT</a>
+    <a href="partners.html">PARTNERS</a>
+    <a href="references.html">REFERENCES</a>
   </nav>
 </header>
+
+
+<aside class="time-rail" aria-hidden="true">
+  <span>1795</span><i></i>
+  <span>1870</span><i></i>
+  <span>2026</span><i></i>
+  <span>2100</span>
+</aside>
+
 <main>
-<section class="hero ruin-frame">
-  <a class="hero-plate" href="project.html" aria-label="Enter Ruins Regrounded project">
-    <img src="assets/hero.svg" alt="Composite landscape drawing of Shornemead Fort, its openings, material decay and tidal ground">
-    <span class="erosion-mask" aria-hidden="true"></span>
-    <span class="scan" aria-hidden="true"></span>
-  </a>
-  <div class="hero-copy">
-    <p class="kicker">Landscape practice / Cairo + London</p>
-    <h1>IRIBIOPOLIS</h1>
-    <div class="hero-statement"><p>Working with what remains.</p><a href="practice.html">Enter the practice <span>↗</span></a></div>
+<section class="hero-world" id="hero">
+  <div class="hero-meta top">
+    <span>51.4518° N / 0.4676° E</span>
+    <span>THAMES ESTUARY</span>
+    <span>ACTIVE RUINATION / 2026—2100</span>
   </div>
-  <div class="coordinates" aria-hidden="true"><span>51.4518° N</span><span>0.4676° E</span><span>TIDAL / OCCUPIED / UNFINISHED</span></div>
-</section>
-<section class="threshold section">
-  <div class="section-code">01 / POSITION</div>
-  <div class="threshold-grid">
-    <h2>Ruination is not the end of a site.</h2>
-    <div><p>It is the moment when structures, ecologies, memories and uses stop agreeing with one another.</p><p>Iribiopolis works inside that instability.</p></div>
-  </div>
-  <a class="text-link" href="practice.html">Read the manifesto <span>→</span></a>
-</section>
-<section class="portal section dark">
-  <div class="section-code">02 / CENTRAL PROJECT</div>
-  <a class="portal-image" href="project.html"><img src="assets/transect.svg" alt="Territorial transect from dock infrastructure through marsh to Shornemead Fort"><span>OPEN PROJECT</span></a>
-  <div class="portal-copy"><p class="eyebrow">Ruins Regrounded</p><h2>A fort opened to tide, occupation and succession.</h2><p>The proposal does not restore a finished object. It creates a changing civic and ecological ground shaped by twelve openings, flooding, sediment, vegetation and public movement.</p><a class="button" href="project.html">Explore the project</a></div>
-</section>
-<section class="systems section">
-  <div class="section-code">03 / HOW WE WORK</div>
-  <div class="system-orbit" id="system-orbit">
-    <a href="fieldnotes.html#recording" class="system-node" style="--x:12%;--y:18%"><span>01</span>Record</a>
-    <a href="fieldnotes.html#mapping" class="system-node" style="--x:73%;--y:12%"><span>02</span>Map</a>
-    <a href="fieldnotes.html#listening" class="system-node" style="--x:45%;--y:38%"><span>03</span>Listen</a>
-    <a href="project.html#openings" class="system-node" style="--x:17%;--y:72%"><span>04</span>Open</a>
-    <a href="project.html#regrounding" class="system-node" style="--x:79%;--y:70%"><span>05</span>Reground</a>
-    <a href="relations.html" class="system-node" style="--x:48%;--y:84%"><span>06</span>Share</a>
-    <svg class="root-lines" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true"><path d="M120 100 C300 20 400 260 720 70 S760 420 480 470 S180 380 120 100"/><path d="M440 210 C540 100 760 160 780 390"/><path d="M170 400 C320 500 500 380 720 420"/></svg>
+
+  <button class="hero-plate lightbox-trigger" data-full="assets/a0-composite.webp" aria-label="Open full A0 composite drawing">
+    <img class="hero-base" src="assets/a0-composite.webp" alt="Ruins Regrounded A0 composite drawing">
+    <img class="hero-refract" src="assets/a0-composite.webp" alt="" aria-hidden="true">
+    <span class="weather-field" aria-hidden="true"></span>
+    <span class="scan-field" aria-hidden="true"></span>
+  </button>
+
+  <div class="hero-meta bottom">
+    <span>RUINS REGROUNDED</span>
+    <span>SHORNEMEAD FORT</span>
+    <a href="project.html">ENTER PROJECT →</a>
   </div>
 </section>
-<section class="archive-gate section dark">
-  <div class="section-code">04 / LINEAGE</div>
-  <div class="archive-intro"><h2>Before the proposal came the evidence.</h2><p>Field recordings, contaminated ground, hydrological traces, informal access, industrial remains and speculative futures developed the practice.</p></div>
-  <div class="archive-cards">
-    <a href="fieldnotes.html#digestion"><img src="assets/digestion.svg" alt="Digestion and Ruination mapping"><span><b>Digestive territories</b><small>systems / extraction / invasion</small></span></a>
-    <a href="fieldnotes.html#recording"><img src="assets/recordings.svg" alt="Layers of ruination recordings"><span><b>Material evidence</b><small>decay / water / occupation</small></span></a>
-    <a href="fieldnotes.html#entropy"><img src="assets/entropy.svg" alt="Between order and entropy design study"><span><b>Unstable ground</b><small>industry / habitat / contamination</small></span></a>
+
+<section class="project-gate chapter-black">
+  <div class="section-code">01 / CENTRAL PROJECT</div>
+  <div class="project-gate-copy">
+    <div>
+      <p class="micro">GRAVESEND / THAMES / FUTURE TIDAL GROUND</p>
+      <h2>RUINS<br>REGROUNDED</h2>
+    </div>
+    <div class="gate-description">
+      <p>Shornemead Fort is mapped through military history, material decay, informal occupation, ecological succession and future flood conditions.</p>
+      <div class="data-bands">
+        <span>DECAY</span><span>SUBVERSION</span><span>ASSIMILATION</span>
+        <span>CONTINUATION</span><span>ACCELERATION</span><span>COHABITATION</span>
+      </div>
+      <a class="button-light" href="project.html">EXPLORE THE PROJECT →</a>
+    </div>
   </div>
 </section>
-<section class="relations-preview section">
-  <div class="section-code">05 / RELATIONS</div>
-  <div class="relations-preview-grid">
-    <h2>Practice is built through relations.</h2>
-    <div class="relation-list"><a href="relations.html#communities">Communities and local knowledge <span>↗</span></a><a href="relations.html#institutions">Environmental and heritage institutions <span>↗</span></a><a href="relations.html#collaborators">Researchers, ecologists, artists and fabricators <span>↗</span></a><a href="relations.html#commission">Commission a study, strategy or public programme <span>↗</span></a></div>
+
+<section class="practice-field">
+  <div class="section-code">02 / HOW WE WORK</div>
+  <div class="practice-heading">
+    <h2>Experience the site. Follow the questions it creates. Return with more knowledge.</h2>
+    <p>Experience, inquiry and engagement lead to a design position. Speculation carries that position forward in time.</p>
+  </div>
+  <div class="method-sequence" aria-label="Practice method">
+    <article><span>01</span><h3>EXPERIENCE</h3><p>Visit repeatedly. Walk, listen, photograph and observe.</p></article><b>→</b>
+    <article><span>02</span><h3>INQUIRE</h3><p>Research the histories, materials, ecologies and systems that curiosity reveals.</p></article><b>→</b>
+    <article><span>03</span><h3>ENGAGE</h3><p>Work with people, stakeholders, other disciplines and non-human life.</p></article><b>→</b>
+    <article><span>04</span><h3>POSITION</h3><p>Decide what to retain, remove, add, accelerate or leave be.</p></article><b>→</b>
+    <article><span>05</span><h3>SPECULATE</h3><p>Test how those decisions might change with time, climate and occupation.</p></article>
+    <div class="return-line">RETURN TO SITE ↺</div>
   </div>
 </section>
-<section class="contact-ruin section dark">
-  <div class="contact-sigil"><img src="assets/sigil.svg" alt="Iribiopolis symbol"></div>
-  <div><p class="eyebrow">Enter the unfinished</p><h2>Bring us a site that refuses a simple answer.</h2><a class="button light" href="mailto:khaled.rk.gad@gmail.com">Start a conversation</a></div>
+<section class="relations-gate chapter-black">
+  <div class="section-code">04 / WITH OTHERS</div>
+  <div class="relations-grid-home">
+    <h2>Collaboration expands what a landscape can reveal.</h2>
+    <div>
+      <a href="partners.html#communities">COMMUNITIES <span>routes / memory / use</span></a>
+      <a href="partners.html#collaborators">COLLABORATORS <span>ecology / research / making</span></a>
+      <a href="partners.html#institutions">INSTITUTIONS <span>access / care / implementation</span></a>
+      <a href="partners.html#open-call">OPEN CALL <span>bring a site / question / fragment</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="closing-field">
+  <p class="micro">EREÍPIAPÓLIS / OPEN CALL</p>
+  <h2>Bring a landscape that is already changing.</h2>
+  <a href="partners.html#open-call">START A CONVERSATION →</a>
 </section>
 </main>
-<footer><span>IRIBIOPOLIS</span><span>Founded by Khaled .M Gad</span><span>© 2026</span></footer>
+
+
+<footer class="site-footer">
+  <span>EREÍPIAPÓLIS</span>
+  <span>Founded by Khaled M. Gad — London</span>
+  <a href="mailto:khaled.rk.gad@gmail.com">khaled.rk.gad@gmail.com</a>
+</footer>
+
+
+<div class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close image">×</button>
+  <button class="lightbox-prev" aria-label="Previous image">←</button>
+  <img class="lightbox-image" alt="">
+  <button class="lightbox-next" aria-label="Next image">→</button>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
